@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive navbar</title>
+
+    <style>
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    a {
+        text-decoration: none;
+        margin-right: 4px;
+    }
+
+    p {
+        display:none;
+    }
+
+    .menu-items {
+      display: flex;
+      gap: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+       nav {
+        display:none;
+       }
+        
+       p {
+         display: block;
+       }
+      
+
+      
+      
+
+    }
+
+
+    @media screen and (min-width:768px){
+       
+      nav {
+        display: flex;
+        align-items: center;
+      }
+
+
+
+    }
+
+    </style>
+</head>
+<body>
+    <p id="hamburger-menu"><img src="https://clipground.com/images/three-dots-png-9.png" alt="hamburger-menu-img" width="50px"></p>
+  <nav>
+    <div class="navbar-brand">Logo</div>
+    <!-- <p><img src="https://clipground.com/images/three-dots-png-9.png" alt="hamburger-menu-img"></p> -->
+    <div class="menu-items">
+        <a href="">Home</a>
+        <a href="">Services</a>
+        <a href="">About</a>
+        
+    </div>
+  </nav>
+
+  
+
+
+
+
+
+<script>
+
+
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const navBar = document.getElementsByTagName('nav')[0];
+const menuItems = document.querySelector('.menu-items');
+
+// console.log(navBar);
+// navBar.style.display = 'flex';
+// navBar.style.flexDirection = 'column';
+
+hamburgerMenu.addEventListener('click', function (){
+  navBar.style.display = 'flex';
+navBar.style.flexDirection = 'column';
+menuItems.style.display = 'flex'
+menuItems.style.flexDirection = 'column';
+menuItems.style.alignItems = 'center';
+}
+);
+
+
+
+
+
+</script>
+   
+
+
+
+</body>
+</html>

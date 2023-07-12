@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Box Example</title>
+  <style>
+    #inputText {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="inputText" placeholder="Type something...">
+  <button id="submitBtn">Submit</button>
+  <div id="output"></div>
+
+  <script>
+    var input = document.getElementById('inputText');
+    var submitBtn = document.getElementById('submitBtn');
+    var output = document.getElementById('output');
+
+    submitBtn.addEventListener('click', function() {
+      var inputValue = input.value;
+      var newParagraph = document.createElement('p');
+      newParagraph.textContent = inputValue;
+      output.appendChild(newParagraph);
+      input.value = ''; // Clear the input box
+    });
+  </script>
+</body>
+</html>
